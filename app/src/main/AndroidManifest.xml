@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ball"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LaLiga"></activity>
+        <activity android:name=".PremierLeague" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
