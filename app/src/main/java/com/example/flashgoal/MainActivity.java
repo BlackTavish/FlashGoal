@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private ImageView logo_PL,logo_LL;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
