@@ -7,25 +7,26 @@
     app:cardCornerRadius="8dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
         <ImageView
             android:id="@+id/image_view"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@mipmap/ic_launcher" />
+
         <TextView
             android:id="@+id/text_view_creator"
-            android:layout_width="wrap_content"
+            android:layout_width="218dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
             android:text="Creator Name"
             android:textColor="@android:color/black"
-            android:textSize="20sp" />
-        <TextView
-            android:id="@+id/text_view_likes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Like: " />
+            android:textSize="30dp"
+            android:textStyle="bold"
+            />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

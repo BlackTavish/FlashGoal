@@ -40,19 +40,19 @@ public class PremierLeague extends AppCompatActivity {
 
     }
     private void parseJSON() {
-        String url = "https://pixabay.com/api/?key=19540727-f31919c5419b86947e5a6a270&q=kitten&image_type=photo&pretty=true";
+        String url = "http://localhost:3000/clubs";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray jsonArray = response.getJSONArray("hits");
+                            JSONArray jsonArray = response.getJSONArray("clubs");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
-                                String creatorName = hit.getString("user");
-                                String imageUrl = hit.getString("webformatURL");
-                                int likeCount = hit.getInt("likes");
-                                mExampleList.add(new ExampleItem(imageUrl, creatorName, likeCount));
+                                String clubName = hit.getString("name");
+                                String imageUrl = hit.getString("image_url");
+                               // int likeCount = hit.getInt("likes");
+                                mExampleList.add(new ExampleItem(imageUrl, clubName));
                             }
                             mExampleAdapter = new ExampleAdapter(PremierLeague.this, mExampleList);
                             mRecyclerView.setAdapter(mExampleAdapter);

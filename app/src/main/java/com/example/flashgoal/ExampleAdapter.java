@@ -29,10 +29,10 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     public void onBindViewHolder(ExampleViewHolder holder, int position) {
         ExampleItem currentItem = mExampleList.get(position);
         String imageUrl = currentItem.getImageUrl();
-        String creatorName = currentItem.getCreator();
-        int likeCount = currentItem.getLikeCount();
-        holder.mTextViewCreator.setText(creatorName);
-        holder.mTextViewLikes.setText("Likes: " + likeCount);
+        String clubName = currentItem.getName();
+        //int likeCount = currentItem.getLikeCount();
+        holder.mTextViewName.setText(clubName);
+        //holder.mTextViewLikes.setText("Likes: " + likeCount);
         Picasso.with(mContext).load(imageUrl).fit().centerInside().into(holder.mImageView);
     }
     @Override
@@ -41,13 +41,13 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     }
     public class ExampleViewHolder extends RecyclerView.ViewHolder {
         public ImageView mImageView;
-        public TextView mTextViewCreator;
-        public TextView mTextViewLikes;
+        public TextView mTextViewName;
+        //public TextView mTextViewLikes;
         public ExampleViewHolder(View itemView) {
             super(itemView);
             mImageView = itemView.findViewById(R.id.image_view);
-            mTextViewCreator = itemView.findViewById(R.id.text_view_creator);
-            mTextViewLikes = itemView.findViewById(R.id.text_view_likes);
+            mTextViewName = itemView.findViewById(R.id.text_view_creator);
+            //mTextViewLikes = itemView.findViewById(R.id.text_view_likes);
         }
     }
 }

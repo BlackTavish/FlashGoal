@@ -2,20 +2,20 @@ package com.example.flashgoal;
 
 public class ExampleItem {
     private String mImageUrl;
-    private String mCreator;
-    private int mLikes;
-    public ExampleItem(String imageUrl, String creator, int likes) {
+    private String mName;
+    //private int mLikes;
+    public ExampleItem(String imageUrl, String name) {
         mImageUrl = imageUrl;
-        mCreator = creator;
-        mLikes = likes;
+        mName = name;
+       // mLikes = likes;
     }
     public String getImageUrl() {
         return mImageUrl;
     }
-    public String getCreator() {
-        return mCreator;
+    public String getName() {
+        return mName;
     }
-    public int getLikeCount() {
-        return mLikes;
-    }
+   // public int getLikeCount() {
+   //     return mLikes;
+   // }
 }

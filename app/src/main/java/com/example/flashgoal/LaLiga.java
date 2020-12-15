@@ -25,12 +25,12 @@ public class LaLiga extends AppCompatActivity {
     private ExampleAdapter mExampleAdapter;
     private ArrayList<ExampleItem> mExampleList;
     private RequestQueue mRequestQueue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_la_liga);
+        setContentView(R.layout.activity_premier_league);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -40,19 +40,19 @@ public class LaLiga extends AppCompatActivity {
 
     }
     private void parseJSON() {
-        String url = "https://pixabay.com/api/?key=19540727-f31919c5419b86947e5a6a270&q=kitten&image_type=photo&pretty=true";
+        String url = "http://localhost:3000/clubs";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            JSONArray jsonArray = response.getJSONArray("hits");
+                            JSONArray jsonArray = response.getJSONArray("clubs");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject hit = jsonArray.getJSONObject(i);
-                                String creatorName = hit.getString("user");
-                                String imageUrl = hit.getString("webformatURL");
-                                int likeCount = hit.getInt("likes");
-                                mExampleList.add(new ExampleItem(imageUrl, creatorName, likeCount));
+                                String clubName = hit.getString("name");
+                                String imageUrl = hit.getString("image_url");
+                                // int likeCount = hit.getInt("likes");
+                                mExampleList.add(new ExampleItem(imageUrl, clubName));
                             }
                             mExampleAdapter = new ExampleAdapter(LaLiga.this, mExampleList);
                             mRecyclerView.setAdapter(mExampleAdapter);
