@@ -1,0 +1,249 @@
+{
+    "clubsPL":[
+        
+                    {
+                        
+                        "name": "Liverpool",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e5.png"
+
+                    },
+                    {
+                       
+                        "name": "Tottenham",
+                        "image_url": "https://i.imgur.com/emNNXyq.jpg"
+
+                    },
+                    {
+                     
+                        "name": "Leicester",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e8.png"
+
+                    },
+                    {
+                      
+                        "name": "Southampton",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4ea.png"
+
+                    },
+                    {
+                      
+                        "name": "Chelsea",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e1.png"
+
+                    },
+                    {
+                        
+                        "name": "West Ham",
+                        "image_url": "https://logodownload.org/wp-content/uploads/2019/05/west-ham-united-logo.png"
+
+                    },
+                    {
+                        
+                        "name": "Everton",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e3.png"
+
+                    },
+                    {
+                        
+                        "name": "Manchester Utd",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e7.png"
+
+                    },
+                    {
+                        
+                        "name": "Manchester City",
+                        "image_url": "https://logodownload.org/wp-content/uploads/2017/02/manchester-city-fc-logo-escudo-badge.png"
+
+                    },
+                    {
+                        
+                        "name": "Aston Villa",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e4.png"
+
+                    },
+                    {
+                        
+                        "name": "Crystal Palace",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4e2.png"
+
+                    },
+                    {
+                        "name": "Newcastle",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4ec.png"
+
+                    },
+                    {
+                        
+                        "name": "Wolves",
+                        "image_url": "https://logodownload.org/wp-content/uploads/2019/04/wolverhampton-logo-escudo-1.png"
+
+                    },
+                    {
+                        
+                        "name": "Leeds",
+                        "image_url": "https://toppng.com/public/uploads/preview/leeds-united-football-logo-png-11536018007ce9oimdy6g.png"
+
+                    },
+                    {
+                        
+                        "name": "Arsenal",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4df.png"
+
+                    },
+                    {
+                       
+                        "name": "Brighton",
+                        "image_url": "https://logodownload.org/wp-content/uploads/2019/10/brighton-hove-albion-logo-3.png"
+
+                    },
+                    {
+                        
+                        "name": "Burnley",
+                        "image_url": "https://logodownload.org/wp-content/uploads/2019/10/burnley-logo-3.png"
+
+                    },
+                    {
+                        
+                        "name": "Fulham",
+                        "image_url": "https://seeklogo.com/images/F/fulham-fc-logo-EBBC39136A-seeklogo.com.png"
+
+                    },
+                    {
+                    
+                        "name": "West Brom",
+                        "image_url": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c4f4.png"
+
+                    },
+                    {
+                        
+                        "name": "Sheffield Utd",
+                        "image_url": "https://logodownload.org/wp-content/uploads/2019/10/sheffield-united-logo-2.png"
+
+                    }
+                   
+                ],
+        "clubsLL":[
+                    {
+
+                        "name": "Real Sociedad",
+                        "image_url": "https://assets.stickpng.com/images/584ad36ab519ea740933a8d3.png"
+
+                    },
+                    {
+                        
+                        "name": "Atletico Madryt",
+                        "image_url": "https://tmssl.akamaized.net/images/wappen/big/13.png?lm=1519120744"
+
+                    },
+                    {
+                    
+                        "name": "Real Madryt",
+                        "image_url": "https://youngface.tv/wp-content/uploads/article_uploads/580e07c259028-real-madryt.png"
+
+                    },
+                    {
+                    
+                        "name": "Villarreal",
+                        "image_url": "https://assets.stickpng.com/images/584a9b57b080d7616d298779.png"
+
+                    },
+                    {
+                    
+                        "name": "Sevilla",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad291b519ea740933a8ba.png"
+
+                    },
+                    {
+                        "name": "Cadiz",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad7abb519ea740933a953.png"
+
+                    },
+                    {
+                        
+                        "name": "Granada",
+                        "image_url": "https://assets.stickpng.com/images/584ad13db519ea740933a897.png"
+
+                    },
+                    {
+                    
+                        "name": "Barcelona",
+                        "image_url": "https://assets.stickpng.com/images/584a9b3bb080d7616d298777.png"
+
+                    },
+                    {
+                        
+                        "name": "Betis",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad396b519ea740933a8d9.png"
+
+                    },
+                    {
+                    
+                        "name": "Eibar",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad306b519ea740933a8c7.png"
+
+                    },
+                    {
+                        
+                        "name": "Valencia",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad186b519ea740933a89e.png"
+
+                    },
+                    {
+                        
+                        "name": "Athletic Bilbao",
+                        "image_url": "https://assets.stickpng.com/images/584ad135b519ea740933a896.png"
+
+                    },
+                    {
+                        
+                        "name": "Elche",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad4e5b519ea740933a901.png"
+
+                    },
+                    {
+                        
+                        "name": "Alaves",
+                        "image_url": "https://assets.stickpng.com/images/584ad125b519ea740933a895.png"
+
+                    },
+                    {
+                        
+                        "name": "Getafe",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad4b1b519ea740933a8fc.png"
+
+                    },
+                    {
+                        
+                        "name": "Valladolid",
+                        "image_url": "https://assets.stickpng.com/images/584ad354b519ea740933a8d1.png"
+
+                    },
+                    {
+                        
+                        "name": "Celta Vigo",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad3c4b519ea740933a8df.png"
+
+                    },
+                    {
+                        
+                        "name": "Levante",
+                        "image_url": "https://toppng.com/uploads/preview/levante-logo-vector-free-download-115742185119t0twgav36.png"
+
+                    },
+                    {
+                        
+                        "name": "Huesca",
+                        "image_url": "https://toppng.com/uploads/preview/sd-huesca-vector-logo-11574288114wbk65wrpz0.png"
+
+                    },
+                    {
+                        
+                        "name": "Osasuna",
+                        "image_url": "https://assets.stickpng.com/thumbs/584ad403b519ea740933a8e7.png"
+
+                    }
+        ]
+   
+                
+            
+}
