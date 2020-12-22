@@ -18,6 +18,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     LayoutInflater inflater;
     List<Club> clubs;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public Adapter(Context ctx, List<Club> clubs){
         this.inflater = LayoutInflater.from(ctx);
@@ -54,6 +63,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
             clubTitle = itemView.findViewById(R.id.clubTitle);
             clubImage = itemView.findViewById(R.id.clubImage);
+
+            itemView.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    if(mListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
 
         }
     }
