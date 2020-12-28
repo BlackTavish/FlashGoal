@@ -67,10 +67,10 @@
         android:layout_width="88dp"
         android:layout_height="111dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginBottom="132dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat ="@drawable/ligue" />
+        app:srcCompat="@drawable/ligue" />
 
     <ImageView
         android:id="@+id/SerieA"
