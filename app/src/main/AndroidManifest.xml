@@ -22,7 +22,12 @@
         <activity
             android:name=".PremierLeague"
             android:parentActivityName=".MainActivity" />
-
+        <activity android:name=".Bundesliga"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SerieA"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Ligue"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
