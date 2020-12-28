@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -22,7 +23,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LaLiga extends AppCompatActivity {
+public class LaLiga extends AppCompatActivity implements Adapter.OnItemClickListener {
+
+    public static final String EXTRA_URL = "image_url";
+    public static  final String EXTRA_DESC = "description";
 
     RecyclerView recyclerView;
     List<Club> clubs;
@@ -32,7 +36,7 @@ public class LaLiga extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_premier_league);
+        setContentView(R.layout.activity_la_liga);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = findViewById(R.id.clubsList);
@@ -52,6 +56,7 @@ public class LaLiga extends AppCompatActivity {
                         Club club = new Club();
                         club.setName(clubsObject.getString("name").toString());
                         club.setImageURL(clubsObject.getString("image_url").toString());
+                        club.setDesc(clubsObject.getString("description").toString());
 
                         clubs.add(club);
                     } catch (JSONException e) {
@@ -63,6 +68,8 @@ public class LaLiga extends AppCompatActivity {
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 adapter = new Adapter(getApplicationContext(),clubs);
                 recyclerView.setAdapter(adapter);
+                adapter.setOnItemClickListener(LaLiga.this);
+
             }
         }, new Response.ErrorListener() {
             @Override
@@ -72,5 +79,16 @@ public class LaLiga extends AppCompatActivity {
         });
 
         queue.add(jsonArrayRequest);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent detailIntent = new Intent(this,DetailActivity.class);
+        Club clickedItem = clubs.get(position);
+
+        detailIntent.putExtra(EXTRA_URL,clickedItem.getImageURL());
+        detailIntent.putExtra(EXTRA_DESC,clickedItem.getDesc());
+
+        startActivity(detailIntent);
     }
 }
