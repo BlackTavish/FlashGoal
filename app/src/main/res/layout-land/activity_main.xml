@@ -6,6 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/Ligue1"
+        android:layout_width="75dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ligue" />
+
+    <ImageView
+        android:id="@+id/SerieA"
+        android:layout_width="75dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/seriea" />
+
+    <ImageView
+        android:id="@+id/Bundesliga"
+        android:layout_width="75dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="348dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bundesliga" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="543dp"
@@ -36,8 +66,8 @@
         android:id="@+id/LaLiga"
         android:layout_width="75dp"
         android:layout_height="115dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/laliga" />
@@ -46,8 +76,8 @@
         android:id="@+id/PremierLeague"
         android:layout_width="75dp"
         android:layout_height="115dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="504dp"
+        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/premierleague" />
