@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flashgoal" >
+    package="com.example.flashgoal">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,24 +11,27 @@
         android:roundIcon="@mipmap/ball"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true" >
-        <activity android:name=".DetailActivity"
-                android:parentActivityName=".PremierLeague">
-
-        </activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".PlayersAdapter"></activity>
+        <activity
+            android:name=".DetailActivity"
+            android:parentActivityName=".PremierLeague"></activity>
         <activity
             android:name=".LaLiga"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PremierLeague"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Bundesliga"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".SerieA"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Ligue"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity" >
+        <activity
+            android:name=".Bundesliga"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SerieA"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Ligue"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

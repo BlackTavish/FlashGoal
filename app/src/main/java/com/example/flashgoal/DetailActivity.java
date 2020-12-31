@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +14,7 @@ import static com.example.flashgoal.PremierLeague.EXTRA_DESC;
 import static com.example.flashgoal.PremierLeague.EXTRA_URL;
 
 public class DetailActivity extends AppCompatActivity {
+    private Button playersButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,5 +32,9 @@ public class DetailActivity extends AppCompatActivity {
 
         Picasso.get().load(imageURL).fit().centerInside().into(imageView);
         textView.setText(desc);
+
+        playersButton = findViewById(R.id.playersButton);
+
+
     }
 }
