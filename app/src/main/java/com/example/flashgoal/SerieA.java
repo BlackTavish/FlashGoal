@@ -26,6 +26,7 @@ public class SerieA extends AppCompatActivity implements Adapter.OnItemClickList
 
     public static final String EXTRA_URL = "image_url";
     public static  final String EXTRA_DESC = "description";
+    public static  final String EXTRA_COACH= "coach";
 
     RecyclerView recyclerView;
     List<Club> clubs;
@@ -56,6 +57,7 @@ public class SerieA extends AppCompatActivity implements Adapter.OnItemClickList
                         club.setName(clubsObject.getString("name").toString());
                         club.setImageURL(clubsObject.getString("image_url").toString());
                         club.setDesc(clubsObject.getString("description").toString());
+                        club.setCoach(clubsObject.getString("coach").toString());
 
                         clubs.add(club);
                     } catch (JSONException e) {
@@ -87,6 +89,7 @@ public class SerieA extends AppCompatActivity implements Adapter.OnItemClickList
 
         detailIntent.putExtra(EXTRA_URL,clickedItem.getImageURL());
         detailIntent.putExtra(EXTRA_DESC,clickedItem.getDesc());
+        detailIntent.putExtra(EXTRA_COACH,clickedItem.getCoach());
 
         startActivity(detailIntent);
     }
