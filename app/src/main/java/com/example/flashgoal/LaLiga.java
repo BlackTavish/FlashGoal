@@ -90,7 +90,7 @@ public class LaLiga extends AppCompatActivity implements Adapter.OnItemClickList
 
         detailIntent.putExtra(EXTRA_URL,clickedItem.getImageURL());
         detailIntent.putExtra(EXTRA_DESC,clickedItem.getDesc());
-        detailIntent.putExtra(EXTRA_DESC,clickedItem.getCoach());
+        detailIntent.putExtra(EXTRA_COACH,clickedItem.getCoach());
 
         startActivity(detailIntent);
     }
