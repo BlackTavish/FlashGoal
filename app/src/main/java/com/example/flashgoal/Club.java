@@ -1,19 +1,23 @@
 package com.example.flashgoal;
 
+import java.util.ArrayList;
+
 public class Club {
     private String name;
     private String imageURL;
     private String desc;
     private String coach;
+    private ArrayList<Player> players;
 
     public Club(){
     }
 
-    public Club(String name , String imageURL, String desc,String coach){
+    public Club(String name , String imageURL, String desc,String coach, ArrayList<Player> players){
         this.name = name;
         this.imageURL = imageURL;
         this.desc = desc;
         this.coach = coach;
+        this.players = players;
     }
 
     public String getName() {
@@ -46,5 +50,13 @@ public class Club {
 
     public void setCoach(String coach){
         this.coach = coach;
+    }
+
+    public ArrayList<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
     }
 }

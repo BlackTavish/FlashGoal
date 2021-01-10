@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 import static com.example.flashgoal.PremierLeague.EXTRA_COACH;
 import static com.example.flashgoal.PremierLeague.EXTRA_DESC;
 import static com.example.flashgoal.PremierLeague.EXTRA_URL;
@@ -24,20 +26,31 @@ public class DetailActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
-        String imageURL = intent.getStringExtra(EXTRA_URL);
-        String desc = intent.getStringExtra(EXTRA_DESC);
-        String coach = intent.getStringExtra(EXTRA_COACH);
+//        String imageURL = intent.getStringExtra(EXTRA_URL);
+//        String desc = intent.getStringExtra(EXTRA_DESC);
+//        String coach = intent.getStringExtra(EXTRA_COACH);
+
+        String imageURL = intent.getExtras().getString("EXTRA_URL");
+        String desc = intent.getExtras().getString("EXTRA_DESC");
+        String coach = intent.getExtras().getString("EXTRA_COACH");
+        ArrayList<Player> players = (ArrayList<Player>) intent.getSerializableExtra("EXTRA_PLAYERS");
+
+        //System.out.println(players.size());
 
         ImageView imageView = findViewById(R.id.img_logo);
         TextView textView = findViewById(R.id.description);
         TextView textView1 = findViewById(R.id.clubCoach);
 
 
-        Picasso.get().load(imageURL).fit().centerInside().into(imageView);
+        Picasso.get().load(imageURL).into(imageView);
         textView.setText(desc);
         textView1.setText(coach);
 
         playersButton = findViewById(R.id.playersButton);
+
+        //Intent intent2 = new Intent(this, nazwa_klasy.class);
+        //intent.putExtra("EXTRA_PLAYERS", players);
+        //startActivity(intent2);
 
 
     }
