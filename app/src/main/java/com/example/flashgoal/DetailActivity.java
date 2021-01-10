@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -48,9 +49,14 @@ public class DetailActivity extends AppCompatActivity {
 
         playersButton = findViewById(R.id.playersButton);
 
-        //Intent intent2 = new Intent(this, nazwa_klasy.class);
-        //intent.putExtra("EXTRA_PLAYERS", players);
-        //startActivity(intent2);
+        playersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(DetailActivity.this, PlayersActivity.class);
+                intent2.putExtra("EXTRA_PLAYERS", players);
+                startActivity(intent2);
+            }
+        });
 
 
     }

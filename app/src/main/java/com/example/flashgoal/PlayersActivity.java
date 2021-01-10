@@ -1,33 +1,34 @@
 package com.example.flashgoal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class PlayersActivity extends AppCompatActivity {
-    RecyclerView recyclerView;
-    List<Player> players;
-    PlayerAdapter playerAdapter;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_players);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_players2);
 
-        recyclerView = findViewById(R.id.playersList);
-        players = new ArrayList<>();
-
+        Intent intent = getIntent();
+        ArrayList<Player> players = (ArrayList<Player>) intent.getSerializableExtra("EXTRA_PLAYERS");
 
 
-        extractPlayers();
-    }
+        mRecyclerView = findViewById(R.id.playersRV);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new PlayersAdapter(players);
 
-    private void extractPlayers(){
-
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
 }

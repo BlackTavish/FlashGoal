@@ -1,6 +1,5 @@
 package com.example.flashgoal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -22,7 +21,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SerieA extends AppCompatActivity{
 
@@ -39,12 +37,13 @@ public class SerieA extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bundesliga);
+        setContentView(R.layout.activity_seriea);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = findViewById(R.id.clubsList);
         clubs = new ArrayList<>();
         extractClubs();
+
     }
     private void extractClubs(){
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -81,7 +80,7 @@ public class SerieA extends AppCompatActivity{
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 adapter = new Adapter(getApplicationContext(),clubs);
                 recyclerView.setAdapter(adapter);
-                //adapter.setOnItemClickListener(Bundesliga.this);
+                //adapter.setOnItemClickListener(LaLiga.this);
 
             }
         }, new Response.ErrorListener() {

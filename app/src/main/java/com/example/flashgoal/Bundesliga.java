@@ -1,6 +1,5 @@
 package com.example.flashgoal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -22,7 +21,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Bundesliga extends AppCompatActivity{
 
@@ -33,7 +31,7 @@ public class Bundesliga extends AppCompatActivity{
     RecyclerView recyclerView;
     ArrayList<Club> clubs;
     private RecyclerView.LayoutManager mLayoutManager;
-    private static String JSON_URL = "http://10.0.2.2:3000/clubsBUN";
+    private static String JSON_URL = "http://10.0.2.2:3000/clubsLL";
     Adapter adapter;
 
     @Override
@@ -45,6 +43,7 @@ public class Bundesliga extends AppCompatActivity{
         recyclerView = findViewById(R.id.clubsList);
         clubs = new ArrayList<>();
         extractClubs();
+
     }
     private void extractClubs(){
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -81,7 +80,7 @@ public class Bundesliga extends AppCompatActivity{
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 adapter = new Adapter(getApplicationContext(),clubs);
                 recyclerView.setAdapter(adapter);
-                //adapter.setOnItemClickListener(Bundesliga.this);
+                //adapter.setOnItemClickListener(LaLiga.this);
 
             }
         }, new Response.ErrorListener() {
